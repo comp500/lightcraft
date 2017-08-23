@@ -2,7 +2,7 @@
   "modid": "lightcraft",
   "name": "LightCraft",
   "description": "Manipulate light to your advantage.",
-  "version": "1.0.0",
-  "mcversion": "1.12",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
   "authorList": ["comp500"]
 }]

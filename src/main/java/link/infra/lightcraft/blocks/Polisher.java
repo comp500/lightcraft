@@ -12,8 +12,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class Polisher extends Block {
     public Polisher() {
         super(Material.ROCK);
-        setUnlocalizedName(LightCraft.MODID + ".polisher");     // Used for localization (en_US.lang)
-        setRegistryName("polisher");        // The unique name (within your mod) that identifies this block
+        setUnlocalizedName(LightCraft.MODID + ".polisher");
+        setRegistryName("polisher");
     }
     
     @SideOnly(Side.CLIENT)
