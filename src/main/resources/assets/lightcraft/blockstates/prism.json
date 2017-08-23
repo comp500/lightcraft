@@ -4,7 +4,7 @@
     "custom": { "flip-v": true },
     "model": "lightcraft:prism.obj",
     "textures": {
-      "#None": "lightcraft:blocks/polisher"
+      "#None": "lightcraft:blocks/prism"
     }
   },
   "variants": {
