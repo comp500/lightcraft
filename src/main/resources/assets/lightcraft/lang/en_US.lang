@@ -2,5 +2,5 @@ tile.lightcraft.polisher.name=Polisher
 tile.lightcraft.prism.name=Prism
 tile.lightcraft.lens.name=Lens
 tile.lightcraft.mirror.name=Mirror
-tile.lightcraft.woodenrod.name=Wooden Rod
-tile.lightcraft.wrench.name=Wrench
+item.lightcraft.woodenrod.name=Wooden Rod
+item.lightcraft.wrench.name=Wrench
