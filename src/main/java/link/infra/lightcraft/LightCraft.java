@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.*;
 
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = LightCraft.MODID, name = LightCraft.MODNAME, version = LightCraft.VERSION, dependencies = "required-after:Forge@[11.16.0.1865,)", useMetadata = true)
+@Mod(modid = LightCraft.MODID, name = LightCraft.MODNAME, version = LightCraft.VERSION, dependencies = "required-after:Forge@[14.21.0.2320,)", useMetadata = true)
 public class LightCraft {
 
     public static final String MODID = "lightcraft";
