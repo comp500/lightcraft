@@ -26,7 +26,7 @@ public class PolisherGui extends GuiContainer {
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
         String text = "Polisher"; // TODO: Change to something better
         int textX = ((xSize/2) - (fontRenderer.getStringWidth(text)/2));
-        drawString(this.fontRenderer, text, guiLeft + textX, guiTop + 6, Color.darkGray.getRGB());
+        fontRenderer.drawString(text, guiLeft + textX, guiTop + 6, Color.darkGray.getRGB());
     }
 
     @Override
