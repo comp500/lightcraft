@@ -2,7 +2,10 @@
   "forge_marker": 1,
   "defaults": {
     "custom": { "flip-v": true },
-    "model": "lightcraft:prism.obj"
+    "model": "lightcraft:prism.obj",
+    "textures": {
+      "#None": "lightcraft:blocks/polisher"
+    }
   },
   "variants": {
     "normal": [{}],
