@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "lightcraft:wrench"
+  },
+  "pattern": [
+    " i ",
+    " si",
+    "s  "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "s": {
+      "item": "lightcraft:woodenrod"
+    },
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    }
+  }
+}
