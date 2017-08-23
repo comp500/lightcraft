@@ -1,7 +1,9 @@
 package link.infra.lightcraft.proxy;
 
+import link.infra.lightcraft.LightCraft;
 import link.infra.lightcraft.ModBlocks;
-import link.infra.lightcraft.blocks.*;
+import link.infra.lightcraft.blocks.polisher.Polisher;
+import link.infra.lightcraft.blocks.polisher.PolisherTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -9,6 +11,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -16,6 +20,7 @@ public class CommonProxy {
     }
 
     public void init(FMLInitializationEvent e) {
+    	NetworkRegistry.INSTANCE.registerGuiHandler(LightCraft.instance, new GuiProxy());
     }
 
     public void postInit(FMLPostInitializationEvent e) {
@@ -24,6 +29,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
     	event.getRegistry().register(new Polisher());
+    	GameRegistry.registerTileEntity(PolisherTileEntity.class, LightCraft.MODID + "_testcontainerblock");
     }
 
     @SubscribeEvent

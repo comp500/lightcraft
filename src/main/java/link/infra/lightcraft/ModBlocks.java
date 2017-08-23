@@ -1,6 +1,6 @@
 package link.infra.lightcraft;
 
-import link.infra.lightcraft.blocks.*;
+import link.infra.lightcraft.blocks.polisher.Polisher;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
