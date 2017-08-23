@@ -7,6 +7,8 @@ import link.infra.lightcraft.blocks.mirror.Mirror;
 import link.infra.lightcraft.blocks.polisher.Polisher;
 import link.infra.lightcraft.blocks.polisher.PolisherTileEntity;
 import link.infra.lightcraft.blocks.prism.Prism;
+import link.infra.lightcraft.items.WoodenRod;
+import link.infra.lightcraft.items.Wrench;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -46,5 +48,7 @@ public class CommonProxy {
     	event.getRegistry().register(new ItemBlock(ModBlocks.prism).setRegistryName(ModBlocks.prism.getRegistryName()));
     	event.getRegistry().register(new ItemBlock(ModBlocks.lens).setRegistryName(ModBlocks.lens.getRegistryName()));
     	event.getRegistry().register(new ItemBlock(ModBlocks.mirror).setRegistryName(ModBlocks.mirror.getRegistryName()));
+    	event.getRegistry().register(new WoodenRod());
+    	event.getRegistry().register(new Wrench());
     }
 }
