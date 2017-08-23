@@ -38,7 +38,12 @@ public class Prism extends Block {
     
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        world.setBlockState(pos, state.withProperty(FACING, getFacingFromEntity(pos, placer)), 2);
+    	EnumFacing facing = getFacingFromEntity(pos, placer);
+    	if (facing == EnumFacing.DOWN || facing == EnumFacing.UP) { // check this later as well?
+    		world.setBlockState(pos, state.withProperty(FACING, EnumFacing.NORTH), 2);
+    	} else {
+    		world.setBlockState(pos, state.withProperty(FACING, facing), 2);
+    	}
     }
     
     public static EnumFacing getFacingFromEntity(BlockPos clickedBlock, EntityLivingBase entity) {
