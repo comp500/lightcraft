@@ -5,8 +5,8 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.ResourceLocation;
 
 public class PolisherGui extends GuiContainer {
-    public static final int WIDTH = 180;
-    public static final int HEIGHT = 152;
+    public static final int WIDTH = 176;
+    public static final int HEIGHT = 166;
 
     private static final ResourceLocation background = new ResourceLocation(LightCraft.MODID, "textures/gui/polisher.png");
 

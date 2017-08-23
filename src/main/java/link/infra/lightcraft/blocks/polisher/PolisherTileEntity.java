@@ -53,4 +53,5 @@ public class PolisherTileEntity extends TileEntity {
         }
         return super.getCapability(capability, facing);
     }
+
 }
