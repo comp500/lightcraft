@@ -27,6 +27,7 @@ public class PolisherGui extends GuiContainer {
         String text = "Polisher"; // TODO: Change to something better
         int textX = ((xSize/2) - (fontRenderer.getStringWidth(text)/2));
         fontRenderer.drawString(text, guiLeft + textX, guiTop + 6, Color.darkGray.getRGB());
+        fontRenderer.drawString("Inventory", guiLeft + 8, guiTop + 72, Color.darkGray.getRGB());
     }
 
     @Override
