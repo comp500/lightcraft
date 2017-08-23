@@ -39,7 +39,6 @@ public class Polisher extends Block implements ITileEntityProvider {
 
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-    	System.out.println(player.getName());
         // Only execute on the server
         if (world.isRemote) {
             return true;
