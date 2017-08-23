@@ -9,6 +9,14 @@
   },
   "variants": {
     "normal": [{}],
-    "inventory": [{}]
+    "inventory": [{}],
+    "facing": {
+      "north": {"y": -90},
+      "south": {"y": 90},
+      "west": {"y": 180},
+      "east": {},
+      "up": {"x": -90, "y": -90},
+      "down": {"x": 90, "y": -90}
+    }
   }
 }
