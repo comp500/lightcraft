@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "lightcraft:polisher"
+  },
+  "pattern": [
+    "sfs",
+    "ftf",
+    "sfs"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "s": {
+      "type": "forge:ore_dict",
+      "ore": "stone"
+    },
+    "f": {
+      "type": "forge:ore_dict",
+      "ore": "sand"
+    },
+    "t": {
+      "item": "minecraft:stick"
+    }
+  }
+}
