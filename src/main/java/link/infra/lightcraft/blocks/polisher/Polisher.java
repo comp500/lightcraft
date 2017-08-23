@@ -7,8 +7,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -49,17 +47,12 @@ public class Polisher extends Block implements ITileEntityProvider {
         if (!(te instanceof PolisherTileEntity)) {
             return false;
         }
-        player.openGui(LightCraft.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
+        if (player.isSneaking()) {
+        	// Move progress forward
+        } else {
+        	player.openGui(LightCraft.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
+        }
         return true;
     }
     
-    @Override
- 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
- 		TileEntity tileEntity = worldIn.getTileEntity(pos);
- 		if (tileEntity instanceof IInventory) {
- 			InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileEntity);
- 		}
-
- 		super.breakBlock(worldIn, pos, state);
- 	}
 }

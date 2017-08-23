@@ -16,9 +16,6 @@ public class PolisherContainer extends Container {
     public PolisherContainer(IInventory playerInventory, PolisherTileEntity te) {
         this.te = te;
 
-        // This container references items out of our own inventory (the 9 slots we hold ourselves)
-        // as well as the slots from the player inventory so that the user can transfer items between
-        // both inventories. The two calls below make sure that slots are defined for both inventories.
         addOwnSlots();
         addPlayerSlots(playerInventory);
     }
@@ -43,16 +40,8 @@ public class PolisherContainer extends Container {
 
     private void addOwnSlots() {
         IItemHandler itemHandler = this.te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-        int x = 10;
-        int y = 6;
-
-        // Add our own slots
-        int slotIndex = 0;
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex, x, y));
-            slotIndex++;
-            x += 18;
-        }
+        addSlotToContainer(new SlotItemHandler(itemHandler, 0, 56, 35));
+        addSlotToContainer(new SlotItemHandler(itemHandler, 1, 116, 35));
     }
 
     @Override

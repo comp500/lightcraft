@@ -10,7 +10,7 @@ import net.minecraftforge.items.ItemStackHandler;
 
 public class PolisherTileEntity extends TileEntity {
 
-    public static final int SIZE = 9;
+    public static final int SIZE = 2;
 
     private ItemStackHandler itemStackHandler = new ItemStackHandler(SIZE) {
         @Override
