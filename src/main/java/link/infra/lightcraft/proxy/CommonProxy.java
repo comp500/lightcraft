@@ -4,6 +4,7 @@ import link.infra.lightcraft.LightCraft;
 import link.infra.lightcraft.ModBlocks;
 import link.infra.lightcraft.blocks.polisher.Polisher;
 import link.infra.lightcraft.blocks.polisher.PolisherTileEntity;
+import link.infra.lightcraft.blocks.prism.Prism;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -30,10 +31,12 @@ public class CommonProxy {
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
     	event.getRegistry().register(new Polisher());
     	GameRegistry.registerTileEntity(PolisherTileEntity.class, LightCraft.MODID + "_testcontainerblock");
+    	event.getRegistry().register(new Prism());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
     	event.getRegistry().register(new ItemBlock(ModBlocks.polisher).setRegistryName(ModBlocks.polisher.getRegistryName()));
+    	event.getRegistry().register(new ItemBlock(ModBlocks.prism).setRegistryName(ModBlocks.prism.getRegistryName()));
     }
 }
