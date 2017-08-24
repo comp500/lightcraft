@@ -159,6 +159,7 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
     					}
     					if (remainder != ItemStack.EMPTY) {
     						inputStackHandler.insertItem(0, item, false); // put item back
+    						turns = 5; // reset turns
     					}
     				}
     			}
