@@ -135,9 +135,10 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
     		delayCounter = 10;
     		if (turnsPerInterval > 0) {
     			turnsPerInterval = 0; // Only allow one turn per 10 ticks
-    			System.out.println("Turned!");
-    			turns++;
-    			if (turns >= 5) {
+    			if (turns < 5) {
+    				turns++;
+    			}
+    			if (turns > 4) {
     				ItemStack item = inputStackHandler.extractItem(0, 1, false);
     				if (item != ItemStack.EMPTY) {
     					turns = 0;
@@ -163,6 +164,14 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
             return;
         }
     	turnsPerInterval++;
+    }
+    
+    public int getTurns() {
+    	return turns;
+    }
+    
+    public void setTurns(int newTurns) {
+    	turns = newTurns;
     }
 
 }
