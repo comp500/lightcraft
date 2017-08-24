@@ -1,7 +1,6 @@
 package link.infra.lightcraft.jei;
 
 import link.infra.lightcraft.LightCraft;
-import link.infra.lightcraft.blocks.polisher.PolisherGui;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
@@ -18,7 +17,7 @@ public class PolisherRecipeCategory implements IRecipeCategory<IRecipeWrapper> {
 
 	public PolisherRecipeCategory(IGuiHelper guiHelper) {
 		ResourceLocation location = new ResourceLocation(LightCraft.MODID, "textures/gui/polisher.png");
-		background = guiHelper.createDrawable(location, 0, 0, PolisherGui.WIDTH, PolisherGui.HEIGHT);
+		background = guiHelper.createDrawable(location, 55, 30, 82, 26);
 	}
 	
 	@Override
@@ -45,8 +44,8 @@ public class PolisherRecipeCategory implements IRecipeCategory<IRecipeWrapper> {
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
 		IGuiItemStackGroup guiItemStacks = recipeLayout.getItemStacks();
 		
-		guiItemStacks.init(0, true, 94, 18);
-		guiItemStacks.init(1, false, 94, 48);
+		guiItemStacks.init(0, true, 0, 4);
+		guiItemStacks.init(1, false, 60, 4);
 		guiItemStacks.set(0, ingredients.getInputs(ItemStack.class).get(0));
 		guiItemStacks.set(1, ingredients.getOutputs(ItemStack.class).get(0));
 	}
