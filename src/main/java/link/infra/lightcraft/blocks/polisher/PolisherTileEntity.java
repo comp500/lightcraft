@@ -1,9 +1,7 @@
 package link.infra.lightcraft.blocks.polisher;
 
-import link.infra.lightcraft.blocks.lens.Lens;
-import link.infra.lightcraft.blocks.mirror.Mirror;
-import link.infra.lightcraft.blocks.prism.Prism;
-import link.infra.lightcraft.items.WoodenRod;
+import link.infra.lightcraft.ModBlocks;
+import link.infra.lightcraft.ModItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -144,15 +142,15 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
     				if (item != ItemStack.EMPTY) {
     					turns = 0;
     					if (item.isItemEqual(new ItemStack(Items.STICK))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(new WoodenRod()), false);
+    						outputStackHandler.internalInsertItem(0, new ItemStack(ModItems.woodenrod), false);
     					} else if (item.isItemEqual(new ItemStack(Items.QUARTZ))) {
     						// crystal not implemented yet
     					} else if (item.isItemEqual(new ItemStack(Items.GLASS_BOTTLE))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(new Lens()), false);
+    						outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.lens), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(new Prism()), false);
+    						outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.prism), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS_PANE))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(new Mirror()), false);
+    						outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.mirror), false);
     					}
     				}
     			}
