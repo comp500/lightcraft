@@ -9,19 +9,16 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import mezz.jei.util.Translator;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 public class PolisherRecipeCategory implements IRecipeCategory<IRecipeWrapper> {
 	
 	private final IDrawable background;
-	private final String localizedName;
 
 	public PolisherRecipeCategory(IGuiHelper guiHelper) {
 		ResourceLocation location = new ResourceLocation(LightCraft.MODID, "textures/gui/polisher.png");
 		background = guiHelper.createDrawable(location, 0, 0, PolisherGui.WIDTH, PolisherGui.HEIGHT);
-		localizedName = Translator.translateToLocal("tile.lightcraft.polisher.name");
 	}
 	
 	@Override
@@ -31,7 +28,7 @@ public class PolisherRecipeCategory implements IRecipeCategory<IRecipeWrapper> {
 
 	@Override
 	public String getTitle() {
-		return localizedName;
+		return "Polisher"; // TODO: make this langified
 	}
 
 	@Override
