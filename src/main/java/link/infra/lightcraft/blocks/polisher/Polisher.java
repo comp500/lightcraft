@@ -48,7 +48,7 @@ public class Polisher extends Block implements ITileEntityProvider {
             return false;
         }
         if (player.isSneaking()) {
-        	// Move progress forward
+        	((PolisherTileEntity) te).addTurn();
         } else {
         	player.openGui(LightCraft.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
         }

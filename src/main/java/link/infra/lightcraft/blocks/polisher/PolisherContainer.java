@@ -40,8 +40,8 @@ public class PolisherContainer extends Container {
 
     private void addOwnSlots() {
         IItemHandler itemHandler = this.te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-        addSlotToContainer(new SlotItemHandler(itemHandler, 0, 56, 35));
-        addSlotToContainer(new SlotItemHandler(itemHandler, 1, 116, 35));
+        this.addSlotToContainer(new SlotItemHandler(itemHandler, 0, 56, 35));
+        this.addSlotToContainer(new SlotItemHandler(itemHandler, 1, 116, 35));
     }
 
     @Override
@@ -53,11 +53,11 @@ public class PolisherContainer extends Container {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (index < PolisherTileEntity.SIZE) {
-                if (!this.mergeItemStack(itemstack1, PolisherTileEntity.SIZE, this.inventorySlots.size(), true)) {
+            if (index < 2) {
+                if (!this.mergeItemStack(itemstack1, 2, this.inventorySlots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.mergeItemStack(itemstack1, 0, PolisherTileEntity.SIZE, false)) {
+            } else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
                 return ItemStack.EMPTY;
             }
 
