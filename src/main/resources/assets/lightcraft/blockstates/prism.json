@@ -5,7 +5,8 @@
     "model": "lightcraft:prism.obj",
     "textures": {
       "#None": "lightcraft:blocks/prism"
-    }
+    },
+    "transform": "forge:default-block"
   },
   "variants": {
     "normal": [{}],
