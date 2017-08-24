@@ -142,16 +142,23 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
     				ItemStack item = inputStackHandler.extractItem(0, 1, false);
     				if (item != ItemStack.EMPTY) {
     					turns = 0;
+    					ItemStack remainder;
     					if (item.isItemEqual(new ItemStack(Items.STICK))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(ModItems.woodenrod), false);
+    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModItems.woodenrod), false);
     					} else if (item.isItemEqual(new ItemStack(Items.QUARTZ))) {
     						// crystal not implemented yet
+    						remainder = null;
     					} else if (item.isItemEqual(new ItemStack(Items.GLASS_BOTTLE))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.lens), false);
+    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.lens), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.prism), false);
+    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.prism), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS_PANE))) {
-    						outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.mirror), false);
+    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.mirror), false);
+    					} else {
+    						remainder = null;
+    					}
+    					if (remainder != ItemStack.EMPTY) {
+    						inputStackHandler.insertItem(0, item, false); // put item back
     					}
     				}
     			}
