@@ -1,6 +1,7 @@
 package link.infra.lightcraft.items;
 
 import link.infra.lightcraft.LightCraft;
+import link.infra.lightcraft.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -12,6 +13,7 @@ public class WoodenRod extends Item {
 	public WoodenRod() {
         setRegistryName("woodenrod");
         setUnlocalizedName(LightCraft.MODID + ".woodenrod");
+        setCreativeTab(ModItems.tab);
     }
 	
 	@SideOnly(Side.CLIENT)
