@@ -45,6 +45,6 @@ public class Crystal extends Block {
     
     @Override
     public BlockRenderLayer getBlockLayer() {
-    	return BlockRenderLayer.SOLID;
+    	return BlockRenderLayer.TRANSLUCENT;
     }
 }
