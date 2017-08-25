@@ -1,7 +1,8 @@
 {
 	"textures": {
-		"2": "minecraft:blocks/stone",
-		"3": "lightcraft:blocks/lensparts"
+		"2": "blocks/stone",
+		"3": "lightcraft:blocks/lensparts",
+		"particle": "blocks/stone"
 	},
 	"elements": [
 		{

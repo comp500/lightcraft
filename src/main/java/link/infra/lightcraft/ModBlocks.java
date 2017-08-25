@@ -32,5 +32,6 @@ public class ModBlocks {
         prism.initModel();
         crystal.initModel();
         lens.initModel();
+        mirror.initModel();
     }
 }
