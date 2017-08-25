@@ -1,6 +1,7 @@
 package link.infra.lightcraft.blocks.polisher;
 
 import link.infra.lightcraft.LightCraft;
+import link.infra.lightcraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -25,6 +26,8 @@ public class Polisher extends Block implements ITileEntityProvider {
         super(Material.ROCK);
         setUnlocalizedName(LightCraft.MODID + ".polisher");
         setRegistryName("polisher");
+        setCreativeTab(ModItems.tab);
+        setHardness(3F);
     }
     
     @SideOnly(Side.CLIENT)

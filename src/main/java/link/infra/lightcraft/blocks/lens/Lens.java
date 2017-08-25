@@ -3,6 +3,7 @@ package link.infra.lightcraft.blocks.lens;
 import java.util.Random;
 
 import link.infra.lightcraft.LightCraft;
+import link.infra.lightcraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -18,6 +19,8 @@ public class Lens extends Block {
 		super(Material.GLASS);
 		setUnlocalizedName(LightCraft.MODID + ".lens");
 		setRegistryName("lens");
+		setCreativeTab(ModItems.tab);
+        setHardness(2F);
 	}
 
 	@Override

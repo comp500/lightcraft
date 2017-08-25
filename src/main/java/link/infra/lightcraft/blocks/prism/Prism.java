@@ -1,6 +1,7 @@
 package link.infra.lightcraft.blocks.prism;
 
 import link.infra.lightcraft.LightCraft;
+import link.infra.lightcraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -27,6 +28,8 @@ public class Prism extends Block {
         super(Material.GLASS);
         setUnlocalizedName(LightCraft.MODID + ".prism");
         setRegistryName("prism");
+        setCreativeTab(ModItems.tab);
+        setHardness(2F);
         
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

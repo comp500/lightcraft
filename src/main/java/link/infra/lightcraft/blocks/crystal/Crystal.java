@@ -1,6 +1,7 @@
 package link.infra.lightcraft.blocks.crystal;
 
 import link.infra.lightcraft.LightCraft;
+import link.infra.lightcraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -20,6 +21,8 @@ public class Crystal extends Block {
         super(Material.GLASS);
         setUnlocalizedName(LightCraft.MODID + ".crystal");
         setRegistryName("crystal");
+        setCreativeTab(ModItems.tab);
+        setHardness(1F);
     }
 
     @SideOnly(Side.CLIENT)
