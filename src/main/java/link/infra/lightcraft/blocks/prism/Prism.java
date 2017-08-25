@@ -22,7 +22,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Prism extends Block {
 	
-	public static final PropertyDirection FACING = PropertyDirection.create("facing");
+	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	
     public Prism() {
         super(Material.GLASS);
@@ -41,19 +41,7 @@ public class Prism extends Block {
     
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-    	EnumFacing facing = getFacingFromEntity(pos, placer);
-    	if (facing == EnumFacing.DOWN || facing == EnumFacing.UP) { // check this later as well?
-    		world.setBlockState(pos, state.withProperty(FACING, EnumFacing.NORTH), 2);
-    	} else {
-    		world.setBlockState(pos, state.withProperty(FACING, facing), 2);
-    	}
-    }
-    
-    public static EnumFacing getFacingFromEntity(BlockPos clickedBlock, EntityLivingBase entity) {
-        return EnumFacing.getFacingFromVector(
-             (float) (entity.posX - clickedBlock.getX()),
-             (float) (entity.posY - clickedBlock.getY()),
-             (float) (entity.posZ - clickedBlock.getZ()));
+    	world.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
     }
     
     @Override
