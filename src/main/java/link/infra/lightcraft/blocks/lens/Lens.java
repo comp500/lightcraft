@@ -7,6 +7,7 @@ import link.infra.lightcraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -46,4 +47,14 @@ public class Lens extends Block {
 			worldIn.spawnParticle(EnumParticleTypes.LAVA, xpos, ypos, zpos, velocityX, velocityY, velocityZ, extraInfo);
 		}
 	}
+	
+	@Override
+    public boolean isOpaqueCube(IBlockState blockState) {
+        return false;
+    }
+    
+    @Override
+    public BlockRenderLayer getBlockLayer() {
+    	return BlockRenderLayer.CUTOUT_MIPPED;
+    }
 }
