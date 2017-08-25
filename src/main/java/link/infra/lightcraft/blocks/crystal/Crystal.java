@@ -22,7 +22,7 @@ public class Crystal extends Block {
         setUnlocalizedName(LightCraft.MODID + ".crystal");
         setRegistryName("crystal");
         setCreativeTab(ModItems.tab);
-        setHardness(1F);
+        setHardness(0.3F);
     }
 
     @SideOnly(Side.CLIENT)

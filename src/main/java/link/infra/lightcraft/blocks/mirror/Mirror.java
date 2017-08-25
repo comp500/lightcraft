@@ -12,6 +12,6 @@ public class Mirror extends Block {
         setUnlocalizedName(LightCraft.MODID + ".mirror");
         setRegistryName("mirror");
         setCreativeTab(ModItems.tab);
-        setHardness(2F);
+        setHardness(1F);
 	}
 }

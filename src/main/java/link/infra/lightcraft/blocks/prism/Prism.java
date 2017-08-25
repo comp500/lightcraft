@@ -29,7 +29,7 @@ public class Prism extends Block {
         setUnlocalizedName(LightCraft.MODID + ".prism");
         setRegistryName("prism");
         setCreativeTab(ModItems.tab);
-        setHardness(2F);
+        setHardness(1F);
         
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

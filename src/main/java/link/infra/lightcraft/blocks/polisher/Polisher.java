@@ -27,7 +27,7 @@ public class Polisher extends Block implements ITileEntityProvider {
         setUnlocalizedName(LightCraft.MODID + ".polisher");
         setRegistryName("polisher");
         setCreativeTab(ModItems.tab);
-        setHardness(3F);
+        setHardness(1.5F);
     }
     
     @SideOnly(Side.CLIENT)

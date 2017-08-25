@@ -20,7 +20,7 @@ public class Lens extends Block {
 		setUnlocalizedName(LightCraft.MODID + ".lens");
 		setRegistryName("lens");
 		setCreativeTab(ModItems.tab);
-        setHardness(2F);
+        setHardness(1F);
 	}
 
 	@Override
