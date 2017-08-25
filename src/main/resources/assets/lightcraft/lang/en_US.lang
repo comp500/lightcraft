@@ -4,3 +4,5 @@ tile.lightcraft.lens.name=Lens
 tile.lightcraft.mirror.name=Mirror
 item.lightcraft.woodenrod.name=Wooden Rod
 item.lightcraft.wrench.name=Wrench
+itemGroup.lightcraft=LightCraft
+tile.lightcraft.crystal.name=Crystal
