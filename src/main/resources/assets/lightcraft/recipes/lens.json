@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "lightcraft:lens"
+  },
+  "pattern": [
+    "s s",
+    "sls",
+    "s s"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "l": {
+      "item": "lightcraft:lensitem"
+    },
+    "s": {
+      "type": "forge:ore_dict",
+      "ore": "stone"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 package link.infra.lightcraft;
 
+import link.infra.lightcraft.items.LensItem;
 import link.infra.lightcraft.items.WoodenRod;
 import link.infra.lightcraft.items.Wrench;
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,9 +23,13 @@ public class ModItems {
 	@GameRegistry.ObjectHolder("lightcraft:wrench")
     public static Wrench wrench;
 	
+	@GameRegistry.ObjectHolder("lightcraft:lensitem")
+    public static LensItem lensitem;
+	
 	@SideOnly(Side.CLIENT)
     public static void initModels() {
 		woodenrod.initModel();
 		wrench.initModel();
+		lensitem.initModel();
 	}
 }

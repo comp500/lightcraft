@@ -1,8 +1,9 @@
 tile.lightcraft.polisher.name=Polisher
 tile.lightcraft.prism.name=Prism
-tile.lightcraft.lens.name=Lens
+tile.lightcraft.lens.name=Solar Focus Lens
 tile.lightcraft.mirror.name=Mirror
 item.lightcraft.woodenrod.name=Wooden Rod
 item.lightcraft.wrench.name=Wrench
 itemGroup.LightCraft=LightCraft
 tile.lightcraft.crystal.name=Crystal
+item.lightcraft.lensitem.name=Lens

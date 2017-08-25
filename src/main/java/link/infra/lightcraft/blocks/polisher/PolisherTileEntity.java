@@ -35,7 +35,7 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
         		return true; // makes White Crystal
         	}
         	if (stack.isItemEqual(new ItemStack(Items.GLASS_BOTTLE))) {
-        		return true; // makes Lens
+        		return true; // makes Lens Item
         	}
         	if (stack.isItemEqual(new ItemStack(Blocks.GLASS))) {
         		return true; // makes Prism
@@ -148,7 +148,7 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
     					} else if (item.isItemEqual(new ItemStack(Items.QUARTZ))) {
     						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.crystal), false);
     					} else if (item.isItemEqual(new ItemStack(Items.GLASS_BOTTLE))) {
-    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.lens), false);
+    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModItems.lensitem), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS))) {
     						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.prism), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS_PANE))) {
