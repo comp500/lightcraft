@@ -4,7 +4,7 @@
     "custom": { "flip-v": true },
     "model": "lightcraft:crystal.obj",
     "textures": {
-      "#None": "lightcraft:blocks/crystalwhite"
+      "#Material": "lightcraft:blocks/crystalwhite"
     },
     "transform": "forge:default-block"
   },
