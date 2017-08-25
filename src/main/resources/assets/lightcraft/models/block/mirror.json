@@ -1,7 +1,7 @@
 {
 	"textures": {
 		"0": "blocks/stone",
-		"1": "blocks/mirrorparts",
+		"1": "lightcraft:blocks/mirrorparts",
 		"particle": "blocks/stone"
 	},
 	"elements": [
