@@ -1,7 +1,8 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "lightcraft:lens"
+    "model": "lightcraft:lens",
+    "transform": "forge:default-block"
   },
   "variants": {
     "normal": [{}],

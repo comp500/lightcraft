@@ -31,5 +31,6 @@ public class ModBlocks {
         polisher.initModel();
         prism.initModel();
         crystal.initModel();
+        lens.initModel();
     }
 }
