@@ -4,6 +4,7 @@ import link.infra.lightcraft.LightCraft;
 import link.infra.lightcraft.ModBlocks;
 import link.infra.lightcraft.blocks.crystal.Crystal;
 import link.infra.lightcraft.blocks.lens.Lens;
+import link.infra.lightcraft.blocks.lens.LensTileEntity;
 import link.infra.lightcraft.blocks.mirror.Mirror;
 import link.infra.lightcraft.blocks.polisher.Polisher;
 import link.infra.lightcraft.blocks.polisher.PolisherTileEntity;
@@ -38,9 +39,10 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
     	event.getRegistry().register(new Polisher());
-    	GameRegistry.registerTileEntity(PolisherTileEntity.class, LightCraft.MODID + "_testcontainerblock");
+    	GameRegistry.registerTileEntity(PolisherTileEntity.class, LightCraft.MODID + "_polisher");
     	event.getRegistry().register(new Prism());
     	event.getRegistry().register(new Lens());
+    	GameRegistry.registerTileEntity(LensTileEntity.class, LightCraft.MODID + "_solarfocuslens");
     	event.getRegistry().register(new Mirror());
     	event.getRegistry().register(new Crystal());
     }
