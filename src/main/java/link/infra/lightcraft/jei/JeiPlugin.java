@@ -33,7 +33,7 @@ public class JeiPlugin implements IModPlugin {
 	@Override
 	public void register(IModRegistry registry) {
 		recipes.add(new PolisherRecipe(new ItemStack(Items.STICK), new ItemStack(ModItems.woodenrod)));
-		//recipes.add(new PolisherRecipe(new ItemStack(Items.QUARTZ), new ItemStack(ModItems.woodenrod)));
+		recipes.add(new PolisherRecipe(new ItemStack(Items.QUARTZ), new ItemStack(ModBlocks.crystal)));
 		recipes.add(new PolisherRecipe(new ItemStack(Items.GLASS_BOTTLE), new ItemStack(ModBlocks.lens)));
 		recipes.add(new PolisherRecipe(new ItemStack(Blocks.GLASS), new ItemStack(ModBlocks.prism)));
 		recipes.add(new PolisherRecipe(new ItemStack(Blocks.GLASS_PANE), new ItemStack(ModBlocks.mirror)));

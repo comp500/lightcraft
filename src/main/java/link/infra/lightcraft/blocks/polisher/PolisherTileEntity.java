@@ -146,8 +146,7 @@ public class PolisherTileEntity extends TileEntity implements ITickable {
     					if (item.isItemEqual(new ItemStack(Items.STICK))) {
     						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModItems.woodenrod), false);
     					} else if (item.isItemEqual(new ItemStack(Items.QUARTZ))) {
-    						// crystal not implemented yet
-    						remainder = null;
+    						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.crystal), false);
     					} else if (item.isItemEqual(new ItemStack(Items.GLASS_BOTTLE))) {
     						remainder = outputStackHandler.internalInsertItem(0, new ItemStack(ModBlocks.lens), false);
     					} else if (item.isItemEqual(new ItemStack(Blocks.GLASS))) {
