@@ -1,5 +1,6 @@
 package link.infra.lightcraft;
 
+import link.infra.lightcraft.blocks.crystal.Crystal;
 import link.infra.lightcraft.blocks.lens.Lens;
 import link.infra.lightcraft.blocks.mirror.Mirror;
 import link.infra.lightcraft.blocks.polisher.Polisher;
@@ -22,9 +23,13 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("lightcraft:mirror")
     public static Mirror mirror;
     
+    @GameRegistry.ObjectHolder("lightcraft:crystal")
+    public static Crystal crystal;
+    
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         polisher.initModel();
         prism.initModel();
+        crystal.initModel();
     }
 }

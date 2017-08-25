@@ -2,6 +2,7 @@ package link.infra.lightcraft.proxy;
 
 import link.infra.lightcraft.LightCraft;
 import link.infra.lightcraft.ModBlocks;
+import link.infra.lightcraft.blocks.crystal.Crystal;
 import link.infra.lightcraft.blocks.lens.Lens;
 import link.infra.lightcraft.blocks.mirror.Mirror;
 import link.infra.lightcraft.blocks.polisher.Polisher;
@@ -40,6 +41,7 @@ public class CommonProxy {
     	event.getRegistry().register(new Prism());
     	event.getRegistry().register(new Lens());
     	event.getRegistry().register(new Mirror());
+    	event.getRegistry().register(new Crystal());
     }
 
     @SubscribeEvent
@@ -50,5 +52,6 @@ public class CommonProxy {
     	event.getRegistry().register(new ItemBlock(ModBlocks.mirror).setRegistryName(ModBlocks.mirror.getRegistryName()));
     	event.getRegistry().register(new WoodenRod());
     	event.getRegistry().register(new Wrench());
+    	event.getRegistry().register(new ItemBlock(ModBlocks.crystal).setRegistryName(ModBlocks.crystal.getRegistryName()));
     }
 }
